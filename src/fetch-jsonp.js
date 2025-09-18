@@ -68,6 +68,9 @@ function fetchJsonp(_url, options = {}) {
     if (options.crossorigin) {
       jsonpScript.setAttribute('crossorigin', 'true');
     }
+    if (['high', 'low', 'auto'].indexOf(options.fetchPriority) !== -1) {
+      jsonpScript.setAttribute('fetchPriority', options.fetchPriority);
+    }
     jsonpScript.id = scriptId;
     document.getElementsByTagName('head')[0].appendChild(jsonpScript);
 

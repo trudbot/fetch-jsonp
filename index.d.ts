@@ -9,6 +9,7 @@ declare namespace fetchJsonp {
     crossorigin?: boolean;
     referrerPolicy?: ReferrerPolicy;
     charset?: string;
+    fetchPriority?: 'high' | 'low' | 'auto';
   }
 
   interface Response {
